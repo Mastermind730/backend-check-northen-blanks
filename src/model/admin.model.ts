@@ -78,7 +78,7 @@ const TeamRegistrationSchema = new mongoose.Schema(
       type: String,
       required: [true, "Leader mobile number is required"],
       trim: true,
-      match: [/^\+?[1-9]\d{9,14}$/, "Please enter a valid leader mobile number in E.164 format (e.g. +12345678901)"],
+  match: [/^\+?[0-9]\d{9,14}$/, "Please enter a valid leader mobile number (10-15 digits, may start with 0 or +)"],
     },
 
     leaderGender: {
@@ -169,7 +169,7 @@ const TeamRegistrationSchema = new mongoose.Schema(
       type: String,
       required: [true, "Mentor mobile number is required"],
       trim: true,
-      match: [/^\+?[1-9]\d{9,14}$/, "Please enter a valid mentor mobile number in E.164 format (e.g. +12345678901)"],
+  match: [/^\+?[0-9]\d{9,14}$/, "Please enter a valid mentor mobile number (10-15 digits, may start with 0 or +)"],
     },
 
     mentorInstitution: {
