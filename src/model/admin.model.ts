@@ -19,7 +19,7 @@ const TeamMemberSchema = new mongoose.Schema({
     type: String,
     required: [true, "Member mobile number is required"],
     trim: true,
-    match: [/^\+?[1-9]\d{9,14}$/, "Please enter a valid mobile number in E.164 format (e.g. +12345678901)"],
+    match: [/^\+?[0-9]\d{9,14}$/, "Please enter a valid mobile number in E.164 format (e.g. +12345678901)"],
   },
   email: {
     type: String,
